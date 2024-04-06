@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://di46k0xpl73fq"]
+
+[ext_resource type="Script" path="res://Encrypt-Decrypt.gd" id="1_ketvt"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_ketvt")
+
+[node name="button_encrypt" type="Button" parent="."]
+offset_left = 145.0
+offset_top = 310.0
+offset_right = 285.0
+offset_bottom = 368.0
+
+[node name="PlainText" type="TextEdit" parent="."]
+offset_left = 29.0
+offset_top = 58.0
+offset_right = 230.0
+offset_bottom = 114.0
+
+[node name="Key" type="TextEdit" parent="."]
+offset_left = 32.0
+offset_top = 133.0
+offset_right = 232.0
+offset_bottom = 191.0
+
+[node name="EncryptedText" type="TextEdit" parent="."]
+offset_left = 32.0
+offset_top = 215.0
+offset_right = 233.0
+offset_bottom = 271.0
+
+[node name="EncryptedTextIn" type="TextEdit" parent="."]
+offset_left = 416.0
+offset_top = 59.0
+offset_right = 617.0
+offset_bottom = 115.0
+
+[node name="Key2" type="TextEdit" parent="."]
+offset_left = 419.0
+offset_top = 134.0
+offset_right = 619.0
+offset_bottom = 192.0
+
+[node name="DecryptedText" type="TextEdit" parent="."]
+offset_left = 419.0
+offset_top = 216.0
+offset_right = 620.0
+offset_bottom = 272.0
+
+[node name="button_decrypt" type="Button" parent="."]
+offset_left = 332.0
+offset_top = 309.0
+offset_right = 472.0
+offset_bottom = 367.0
+
+[connection signal="pressed" from="button_encrypt" to="." method="_on_button_encrypt_pressed"]
+[connection signal="pressed" from="button_decrypt" to="." method="_on_button_decrypt_pressed"]
